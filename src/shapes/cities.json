@@ -1,0 +1,27 @@
+[
+		{
+			"coordinates": [-73.54979636, 41.07819506],
+			"city": "Stamford"
+		}, {
+			"coordinates": [-72.68340116, 41.76607065],
+			"city": "Hartford"
+		}, {
+			"coordinates": [-72.78622631, 41.67580952],
+			"city": "New Britain"
+		}, {
+			"coordinates": [-72.92425205, 41.3104108],
+			"city": "New Haven"
+		}, {
+			"coordinates": [-73.03613056, 41.55824473],
+			"city": "Waterbury"
+		}, {
+			"coordinates": [-73.19549483, 41.18722771],
+			"city": "Bridgeport"
+		}, {
+			"coordinates": [-73.47100269, 41.4015631],
+			"city": "Danbury"
+		}, {
+			"coordinates": [-73.41942583, 41.09295622],
+			"city": "Norwalk"
+		}
+]

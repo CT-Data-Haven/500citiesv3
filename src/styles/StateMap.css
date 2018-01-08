@@ -1,0 +1,34 @@
+.StateMap {
+	/* margin: 24px auto; */
+	position: relative;
+	margin-left: -1px;
+	margin-right: -1px;
+	border-right: 1px solid #d4d4d5;
+	border-left: 1px solid #d4d4d5;
+	border-bottom: 1px solid #d4d4d5;
+}
+
+.StateMap .leaflet-container {
+	width: 100%;
+	height: 420px;
+}
+
+.StateMap div.leaflet-control-layers.leaflet-control {
+	visibility: hidden;
+}
+
+.StateMap .custom-tip {
+	background-color: #333;
+	color: white;
+	border-color: #333;
+	opacity: 0.85;
+	font-size: 0.8em;
+	font-family: 'Lato', sans-serif;
+	padding: 3px;
+	font-weight: 400;
+}
+
+.StateMap .custom-tip::before {
+	/* border-top-color: #333; */
+	visibility: hidden;
+}
