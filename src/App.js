@@ -3,14 +3,14 @@ import * as _ from 'underscore';
 import { Container, Grid, Header } from 'semantic-ui-react';
 import { scaleThreshold } from 'd3-scale';
 import { schemeYlGnBu } from 'd3-scale-chromatic';
-import { nest } from 'd3-collection';
-import { SunsetDark, PurpOr, BurgYl } from 'cartocolor';
 import { ckmeans } from 'simple-statistics';
-import { bbox } from 'topojson';
 
 import { dataPrep } from './components/DataPrep';
 import Filters from './components/Filters';
 import StateMap from './components/StateMap';
+import Chart from './components/Chart';
+import Intro from './components/Intro';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -40,7 +40,10 @@ class App extends React.Component {
 			flatData: [],
 			zoomed: false,
 			city: '',
-			center: center
+			hovered: '',
+			center: center,
+			// cityChart: true,
+			tractChart: false
 		};
 	}
 
@@ -76,6 +79,13 @@ class App extends React.Component {
 		this.update({ ...opts, [name]: value });
 	};
 
+	handleToggle = (e, { name }) => {
+		let val = this.state[name];
+		this.setState({
+			[name]: !val
+		});
+	};
+
 	handleCity = (e, {value}) => {
 		if (value === 'Show all') {
 			this.setState({
@@ -90,6 +100,12 @@ class App extends React.Component {
 		}
 		this.setState({
 			city: value
+		});
+	};
+
+	cityHover = (city) => {
+		this.setState({
+			hovered: city
 		});
 	};
 
@@ -118,32 +134,33 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="App">
 				<Container>
-					<Header as="h1">500 Cities Project: Connecticut</Header>
+
 					<Grid stackable>
 						<Grid.Row>
 							<Grid.Column>
-								{/* intro */}
+								<Header as="h1">500 Cities Project: Connecticut</Header>
+								<Intro />
 							</Grid.Column>
 						</Grid.Row>
 						<Grid.Row>
-							<Grid.Column>
+							<Grid.Column width={6}>
 								<Filters
 									menus={menus}
 									category={this.state.category}
 									measure={this.state.measure}
 									city={this.state.city}
+									tractChart={this.state.tractChart}
 									cities={this.getCityNames()}
 									onChange={this.handleChange}
+									onToggle={this.handleToggle}
 									onCity={this.handleCity}
 								/>
 							</Grid.Column>
-						</Grid.Row>
-						<Grid.Row>
-							<Grid.Column width={16}>
+
+							<Grid.Column width={10}>
 								<Header attached="top" as="h3">
 									<Header.Content>
 										{this.state.measureText}
@@ -158,10 +175,26 @@ class App extends React.Component {
 									cities={this.getCityNames()}
 									colorscale={this.state.colorscale}
 									onClick={this.handleCity}
+									onCityHover={this.cityHover}
 									zoomed={this.state.zoomed}
 									city={this.state.city}
 									center={this.state.center}
 								/>
+							</Grid.Column>
+						</Grid.Row>
+						<Grid.Row>
+							<Grid.Column width={16}>
+								<Chart
+									data={this.state.data}
+									city={this.state.city}
+									hovered={this.state.hovered}
+									tractChart={this.state.tractChart}
+								/>
+							</Grid.Column>
+						</Grid.Row>
+						<Grid.Row>
+							<Grid.Column>
+								<Footer />
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

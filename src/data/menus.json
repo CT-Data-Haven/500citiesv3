@@ -1,30 +1,197 @@
-[
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Annual Checkup","Measure":"Visits to doctor for routine checkup within the past year among adults aged 18+ years","MeasureId":"CHECKUP"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Arthritis","Measure":"Arthritis among adults aged 18+ years","MeasureId":"ARTHRITIS"},
-{"Category":"Unhealthy Behaviors","CategoryID":"UNHBEH","Short_Question_Text":"Binge Drinking","Measure":"Binge drinking among adults aged 18+ years","MeasureId":"BINGE"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Cancer (except skin)","Measure":"Cancer (excluding skin cancer) among adults aged 18+ years","MeasureId":"CANCER"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Cholesterol Screening","Measure":"Cholesterol screening among adults aged 18+ years","MeasureId":"CHOLSCREEN"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Chronic Kidney Disease","Measure":"Chronic kidney disease among adults aged 18+ years","MeasureId":"KIDNEY"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Colorectal Cancer Screening","Measure":"Fecal occult blood test, sigmoidoscopy, or colonoscopy among adults aged 50–75 years","MeasureId":"COLON_SCREEN"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"COPD","Measure":"Chronic obstructive pulmonary disease among adults aged 18+ years","MeasureId":"COPD"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Core preventive services for older men","Measure":"Older adult men aged 65+ years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening","MeasureId":"COREM"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Core preventive services for older women","Measure":"Older adult women aged 65+ years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 years","MeasureId":"COREW"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Coronary Heart Disease","Measure":"Coronary heart disease among adults aged 18+ years","MeasureId":"CHD"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Current Asthma","Measure":"Current asthma among adults aged 18+ years","MeasureId":"CASTHMA"},
-{"Category":"Unhealthy Behaviors","CategoryID":"UNHBEH","Short_Question_Text":"Current Smoking","Measure":"Current smoking among adults aged 18+ years","MeasureId":"CSMOKING"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Dental Visit","Measure":"Visits to dentist or dental clinic among adults aged 18+ years","MeasureId":"DENTAL"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Diabetes","Measure":"Diagnosed diabetes among adults aged 18+ years","MeasureId":"DIABETES"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Health Insurance","Measure":"Current lack of health insurance among adults aged 18–64 years","MeasureId":"ACCESS2"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"High Blood Pressure","Measure":"High blood pressure among adults aged 18+ years","MeasureId":"BPHIGH"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"High Cholesterol","Measure":"High cholesterol among adults aged 18+ years who have been screened in the past 5 years","MeasureId":"HIGHCHOL"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Mammography","Measure":"Mammography use among women aged 50–74 years","MeasureId":"MAMMOUSE"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Mental Health","Measure":"Mental health not good for at least 14 days among adults aged 18+ years","MeasureId":"MHLTH"},
-{"Category":"Unhealthy Behaviors","CategoryID":"UNHBEH","Short_Question_Text":"Obesity","Measure":"Obesity among adults aged 18+ years","MeasureId":"OBESITY"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Pap Smear Test","Measure":"Papanicolaou smear use among adult women aged 21–65 years","MeasureId":"PAPTEST"},
-{"Category":"Unhealthy Behaviors","CategoryID":"UNHBEH","Short_Question_Text":"Physical Activity","Measure":"No leisure-time physical activity among adults aged 18+ years","MeasureId":"LPA"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Physical Health","Measure":"Physical health not good for at least 14 days among adults aged 18+ years","MeasureId":"PHLTH"},
-{"Category":"Unhealthy Behaviors","CategoryID":"UNHBEH","Short_Question_Text":"Sleep","Measure":"Sleeping less than 7 hours among adults aged 18+ years","MeasureId":"SLEEP"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Stroke","Measure":"Stroke among adults aged 18+ years","MeasureId":"STROKE"},
-{"Category":"Prevention","CategoryID":"PREVENT","Short_Question_Text":"Taking BP Medication","Measure":"Taking medicine for high blood pressure control among adults aged 18+ years with high blood pressure","MeasureId":"BPMED"},
-{"Category":"Health Outcomes","CategoryID":"HLTHOUT","Short_Question_Text":"Teeth Loss","Measure":"All teeth lost among adults aged 65+ years","MeasureId":"TEETHLOST"}
+[{
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Annual checkup",
+        "Measure": "Visits to doctor for routine checkup within the past year among adults aged 18+ years",
+        "MeasureId": "CHECKUP"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Arthritis",
+        "Measure": "Arthritis among adults aged 18+ years",
+        "MeasureId": "ARTHRITIS"
+    },
+    {
+        "Category": "Unhealthy Behaviors",
+        "CategoryID": "UNHBEH",
+        "Short_Question_Text": "Binge drinking",
+        "Measure": "Binge drinking among adults aged 18+ years",
+        "MeasureId": "BINGE"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Cancer (except skin)",
+        "Measure": "Cancer (excluding skin cancer) among adults aged 18+ years",
+        "MeasureId": "CANCER"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Cholesterol screening",
+        "Measure": "Cholesterol screening among adults aged 18+ years",
+        "MeasureId": "CHOLSCREEN"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Chronic kidney disease",
+        "Measure": "Chronic kidney disease among adults aged 18+ years",
+        "MeasureId": "KIDNEY"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Colorectal cancer screening",
+        "Measure": "Fecal occult blood test, sigmoidoscopy, or colonoscopy among adults aged 50–75 years",
+        "MeasureId": "COLON_SCREEN"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "COPD",
+        "Measure": "Chronic obstructive pulmonary disease among adults aged 18+ years",
+        "MeasureId": "COPD"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Core preventive services for older men",
+        "Measure": "Older adult men aged 65+ years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening",
+        "MeasureId": "COREM"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Core preventive services for older women",
+        "Measure": "Older adult women aged 65+ years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 years",
+        "MeasureId": "COREW"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Coronary heart disease",
+        "Measure": "Coronary heart disease among adults aged 18+ years",
+        "MeasureId": "CHD"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Current asthma",
+        "Measure": "Current asthma among adults aged 18+ years",
+        "MeasureId": "CASTHMA"
+    },
+    {
+        "Category": "Unhealthy Behaviors",
+        "CategoryID": "UNHBEH",
+        "Short_Question_Text": "Current smoking",
+        "Measure": "Current smoking among adults aged 18+ years",
+        "MeasureId": "CSMOKING"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Dental visit",
+        "Measure": "Visits to dentist or dental clinic among adults aged 18+ years",
+        "MeasureId": "DENTAL"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Diabetes",
+        "Measure": "Diagnosed diabetes among adults aged 18+ years",
+        "MeasureId": "DIABETES"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Health insurance",
+        "Measure": "Current lack of health insurance among adults aged 18–64 years",
+        "MeasureId": "ACCESS2"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "High blood pressure",
+        "Measure": "High blood pressure among adults aged 18+ years",
+        "MeasureId": "BPHIGH"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "High cholesterol",
+        "Measure": "High cholesterol among adults aged 18+ years who have been screened in the past 5 years",
+        "MeasureId": "HIGHCHOL"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Mammography",
+        "Measure": "Mammography use among women aged 50–74 years",
+        "MeasureId": "MAMMOUSE"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Mental health",
+        "Measure": "Mental health not good for at least 14 days among adults aged 18+ years",
+        "MeasureId": "MHLTH"
+    },
+    {
+        "Category": "Unhealthy Behaviors",
+        "CategoryID": "UNHBEH",
+        "Short_Question_Text": "Obesity",
+        "Measure": "Obesity among adults aged 18+ years",
+        "MeasureId": "OBESITY"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Pap smear test",
+        "Measure": "Papanicolaou smear use among adult women aged 21–65 years",
+        "MeasureId": "PAPTEST"
+    },
+    {
+        "Category": "Unhealthy Behaviors",
+        "CategoryID": "UNHBEH",
+        "Short_Question_Text": "Physical activity",
+        "Measure": "No leisure-time physical activity among adults aged 18+ years",
+        "MeasureId": "LPA"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Physical health",
+        "Measure": "Physical health not good for at least 14 days among adults aged 18+ years",
+        "MeasureId": "PHLTH"
+    },
+    {
+        "Category": "Unhealthy Behaviors",
+        "CategoryID": "UNHBEH",
+        "Short_Question_Text": "Sleep",
+        "Measure": "Sleeping less than 7 hours among adults aged 18+ years",
+        "MeasureId": "SLEEP"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Stroke",
+        "Measure": "Stroke among adults aged 18+ years",
+        "MeasureId": "STROKE"
+    },
+    {
+        "Category": "Prevention",
+        "CategoryID": "PREVENT",
+        "Short_Question_Text": "Taking BP medication",
+        "Measure": "Taking medicine for high blood pressure control among adults aged 18+ years with high blood pressure",
+        "MeasureId": "BPMED"
+    },
+    {
+        "Category": "Health Outcomes",
+        "CategoryID": "HLTHOUT",
+        "Short_Question_Text": "Teeth loss",
+        "Measure": "All teeth lost among adults aged 65+ years",
+        "MeasureId": "TEETHLOST"
+    }
 ]

@@ -1,18 +1,15 @@
 import React from 'react';
 import * as _ from 'underscore';
 import { Map, TileLayer, GeoJSON, LayersControl, Pane } from 'react-leaflet';
-import { Container } from 'semantic-ui-react';
+import Control from 'react-leaflet-control';
+import { Container, Button } from 'semantic-ui-react';
 import { format } from 'd3-format';
-import { feature, merge, bbox } from 'topojson';
-// import Legend from './Legend';
+import { feature, merge } from 'topojson';
+import Legend from './Legend';
 
 import '../styles/StateMap.css';
 
 const { Overlay } = LayersControl;
-
-// const position = [41.500765, -72.757507];
-// -73.633975019844 41.016397 -72.642536 41.807568
-
 
 export default class StateMap extends React.Component {
 	makeTractGeo() {
@@ -40,7 +37,7 @@ export default class StateMap extends React.Component {
 		return {
 			fillColor: color,
 			color: '#eee',
-			weight: 0.2,
+			weight: 0.5,
 			opacity: 1,
 			fillOpacity: 0.7
 		};
@@ -99,7 +96,7 @@ export default class StateMap extends React.Component {
 	tractHiliteOff = (e) => {
 		e.target.setStyle({
 			fillOpacity: 0.7,
-			weight: this.props.zoomed ? 0.6 : 0.2,
+			weight: 0.5,
 			color: '#eee'
 		});
 	};
@@ -109,6 +106,7 @@ export default class StateMap extends React.Component {
 			e.target.setStyle({
 				weight: 1.1
 			}).bringToFront();
+			this.props.onCityHover(e.target.feature.geometry.CityName);
 		}
 	};
 
@@ -116,6 +114,7 @@ export default class StateMap extends React.Component {
 		e.target.setStyle({
 			weight: 0.7
 		});
+		this.props.onCityHover('');
 	};
 
 	////////////////////
@@ -124,20 +123,31 @@ export default class StateMap extends React.Component {
 		let tractGeo = feature(this.props.tractShp, this.props.tractShp.objects.tracts);
 		let cityGeo = this.makeCityGeo();
 
-		// let bounds = box;
 		return (
 			<div className="StateMap">
 				<Container>
 
-					<Map center={this.props.center} zoom={this.props.zoomed ? 12 : 9} scrollWheelZoom={false} useFlyTo={true}>
-						{/* <Map bounds={this.props.bounds} scrollWheelZoom={false}> */}
+					<Map
+						center={this.props.center}
+						zoomSnap={0.25}
+						zoomDelta={0.25}
+						zoom={this.props.zoomed ? 12 : 8.75}
+						scrollWheelZoom={false}
+						useFlyTo={true}>
 						<Pane>
+							<Control position="topleft">
+								<Button
+									onClick={this.props.onClick}
+									value="Show all"
+									size="mini"
+									compact
+									disabled={!this.props.zoomed}
+								>Reset</Button>
+							</Control>
 							<LayersControl position="topleft">
 								<TileLayer
 									url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png"
-									// url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}"
 									attribution="&copy; <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> &copy; <a href=http://cartodb.com/attributions>CartoDB</a>"
-									// ext="png"
 								/>
 
 								<Overlay name="tracts" checked={true}>
@@ -159,11 +169,10 @@ export default class StateMap extends React.Component {
 								</Overlay>
 
 							</LayersControl>
+
 						</Pane>
-
-
 					</Map>
-					{/* <Legend colorscale={this.props.colorscale} /> */}
+					<Legend colorscale={this.props.colorscale} />
 				</Container>
 
 			</div>

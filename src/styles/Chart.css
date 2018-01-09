@@ -1,0 +1,24 @@
+.Chart {
+    font-size: 0.8em;
+}
+
+.Chart g.axis path {
+	stroke: #888;
+}
+
+.Chart .custom-tooltip {
+    background-color: #333;
+	color: white;
+	border-color: #333;
+	opacity: 0.85;
+	padding: 3px;
+	border-radius: 4px;
+	font-weight: 400;
+	z-index: 99;
+	font-size: 0.9em;
+	/* min-width: 80px; */
+}
+
+.Chart rect.rect-tract {
+	pointer-events: none;
+}
