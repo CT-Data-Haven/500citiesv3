@@ -2,6 +2,7 @@
   "name": "500citiesv3",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://camille-s.github.io/500citiesv3",
   "dependencies": {
     "@vx/legend": "0.0.143",
     "d3-array": "^1.2.1",
@@ -25,6 +26,8 @@
     "underscore": "^1.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
